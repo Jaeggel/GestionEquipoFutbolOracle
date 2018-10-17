@@ -1,0 +1,28 @@
+SELECT * FROM C##JOEL.JUGADOR;
+
+DELETE FROM C##JOEL.JUGADOR WHERE COD_JUGADOR='131'
+insert into C##JOEL.Jugador VALUES ('131','Joseias','Diaz','Argentina','3',TO_DATE('1990/11/12','YYYY/MM/DD'),'Mediocampista Def.',15)
+
+INSERT ALL
+  INTO mytable (column1, column2, column_n) VALUES (expr1, expr2, expr_n)
+  INTO mytable (column1, column2, column_n) VALUES (expr1, expr2, expr_n)
+  INTO mytable (column1, column2, column_n) VALUES (expr1, expr2, expr_n)
+SELECT * FROM dual;
+
+DESC C##JOEL.JUGADOR;
+insert ALL 
+INTO C##JOEL.Jugador(COD_JUGADOR,NOMBRES_JUGADOR,APELLIDOS_JUGADOR,NACIONALIDAD,DURACION_CONTRATO,FECHA_NAC,POSICION,NUM_CAMISETA)VALUES('131','Joseias','Diaz','Argentina','3',TO_DATE('1990/11/12','YYYY/MM/DD'),'Mediocampista Def.',15)
+INTO C##JOEL.Jugador(COD_JUGADOR,NOMBRES_JUGADOR,APELLIDOS_JUGADOR,NACIONALIDAD,DURACION_CONTRATO,FECHA_NAC,POSICION,NUM_CAMISETA)VALUES('132','Ponce','Alema','Uruguaya','1',TO_DATE('1998/11/09','YYYY/MM/DD'),'Mediocampista Of.',30)
+INTO C##JOEL.Jugador(COD_JUGADOR,NOMBRES_JUGADOR,APELLIDOS_JUGADOR,NACIONALIDAD,DURACION_CONTRATO,FECHA_NAC,POSICION,NUM_CAMISETA)VALUES('133','Carlos','Blanco','Argentina','2',TO_DATE('1978/09/01','YYYY/MM/DD'),'Delantero',9)
+SELECT * FROM DUAL
+
+delete C##JOEL.Jugador where cod_jugador='131';
+delete C##JOEL.Jugador where cod_jugador='132';
+delete C##JOEL.Jugador where cod_jugador='133';
+
+
+
+SELECT * FROM C##JOEL.JUGADOR;
+
+
+insert into C##JOEL.Jugador VALUES ('131','Joseias','Diaz','Argentina','3',TO_DATE('1990/11/12','YYYY/MM/DD'),'Mediocampista Def.',15)

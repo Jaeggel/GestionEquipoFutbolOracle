@@ -1,0 +1,37 @@
+
+1) VENTANA CREACION DE USUARIOS--YA ESTA YA
+
+2)VENTANA RESPALDO Y RECUPERACION
+
+3)IMPORTACION Y EXPORTACION--YA ESTA YA
+
+4)VENTANA HIJA DE USUARIOS (1) PARA ASIGNAR PERMISOS--YA ESTA YA
+
+5)TRIGGER CONTROL--YA ESTA YA
+
+*)VENTANA CONSULTA USUARIOS Y VENTANA CONUSULTA LOG ENVENTOS--YA ESTA YA
+
+ String sentenciaSQL="insert into C##JOEL."+cmbTabla.getSelectedItem().toString().trim()+" "
+            + "VALUES ('"+modelo.getValueAt(i,0).toString().trim()+"','"+modelo.getValueAt(i,1).toString().trim()+"','"+modelo.getValueAt(i,2).toString().trim()+"','"+modelo.getValueAt(i,3).toString().trim()+"','"+modelo.getValueAt(i,4).toString().trim()+"',TO_DATE('"+modelo.getValueAt(i,5).toString().trim()+"','YYYY/MM/DD'),'"+modelo.getValueAt(i,6).toString().trim()+"',"+modelo.getValueAt(i,7).toString().trim()+")";
+            sql.ingresarDatos(estSQL, sentenciaSQL);
+            System.out.println(sentenciaSQL);
+
+
+
+String cad1="INSERT ALL ";
+        String sentenciaSQL="";
+        if(cmbTabla.getSelectedItem().toString().equals("Jugador"))
+        {
+            for(int i=0;i<Tabla1.getRowCount();i++)
+            { 
+                sentenciaSQL+=" ";
+                sentenciaSQL+="INTO C##JOEL.Jugador(COD_JUGADOR,NOMBRES_JUGADOR,APELLIDOS_JUGADOR,NACIONALIDAD,DURACION_CONTRATO,FECHA_NAC,POSICION,NUM_CAMISETA)"
+                        + "VALUES ('"+modelo.getValueAt(i,0).toString().trim()+"','"+modelo.getValueAt(i,1).toString().trim()+"','"+modelo.getValueAt(i,2).toString().trim()+"','"+modelo.getValueAt(i,3).toString().trim()+"','"+modelo.getValueAt(i,4).toString().trim()+"',TO_DATE('"+modelo.getValueAt(i,5).toString().trim()+"','YYYY/MM/DD'),'"+modelo.getValueAt(i,6).toString().trim()+"',"+modelo.getValueAt(i,7).toString().trim()+")";
+                
+
+            }
+            try {
+                estSQL.execute(cad1+sentenciaSQL+" SELECT * FROM DUAL;");
+            } catch (Exception e) {
+                
+            }
